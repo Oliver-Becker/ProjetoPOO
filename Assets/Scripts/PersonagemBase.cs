@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-abstract class PersonagemBase : MonoBehaviour {
+public abstract class PersonagemBase : MonoBehaviour {
 	protected int vida;
 	protected int velocidade;
 	
