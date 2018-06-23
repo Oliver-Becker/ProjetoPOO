@@ -6,31 +6,25 @@ abstract public class PersonagemBase : MonoBehaviour {
 	
 	[SerializeField] protected int health;
 	[SerializeField] protected int speed;
-	[SerializeField] protected float imunityCooldown;
+	[SerializeField] protected float immunityCooldown;
 
 	protected bool canMove;
-
-	private float imunityCounter;
-
-	void Start() {
-		imunityCounter = 0;
-	}
-
-	void Update() {
-		if (imunityCounter < imunityCooldown)
-			imunityCounter += Time.deltaTime;
-	}
-
-	protected float GetImunityCounter() {
-		return imunityCounter;
-	}
+	private bool isImmune = false;
 
 	public virtual void TakeDamage(int damage){
-		if (imunityCounter >= imunityCooldown) {
+		if (!isImmune) {
 			this.health -= damage;
-			imunityCounter = 0;
+			StartCoroutine (WaitForImmunity ());
 		}
 	}
 
+	private IEnumerator WaitForImmunity() {
+		isImmune = true;
+		yield return new WaitForSeconds (immunityCooldown);
+		isImmune = false;
+	}
+
 	public abstract void Move ();
+
+
 }

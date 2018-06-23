@@ -19,6 +19,7 @@ public class PlayerController : PersonagemBase {
 	void Update () {
 		if (canMove)
 			Move ();
+
 	}
 
 	public override void Move() {
