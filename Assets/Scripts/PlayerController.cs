@@ -23,10 +23,10 @@ public class PlayerController : PersonagemBase {
 
 	public override void Move() {
 		//Debug.Log ("movendo");
-		float horizontalMovement = Input.GetAxis ("Horizontal");
-		float verticalMovement = Input.GetAxis ("Vertical");
+		float horizontalMovement = Input.GetAxisRaw ("Horizontal");
+		float verticalMovement = Input.GetAxisRaw ("Vertical");
 		Vector2 movement = new Vector2 (horizontalMovement, verticalMovement);
 
-		rigid.velocity = movement * speed;
+		rigid.velocity = movement.normalized * speed;
 	}
 }

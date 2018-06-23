@@ -10,7 +10,7 @@ public class InimigoMeele : InimigoBase {
 		playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
 		playerStats = playerTransform.GetComponent<PlayerController>();
 		rb = gameObject.GetComponent<Rigidbody2D>();
-		velocidade = 5;
+		speed = 5;
 		damage=3;
 
 

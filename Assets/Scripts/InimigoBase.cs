@@ -11,7 +11,7 @@ public class InimigoBase : PersonagemBase {
 		//if(canMove == 1)//Movimenta o inimigo(variavel da classe base) 
 			Vector3 direction;
 			direction = playerTransform.position - transform.position;
-			direction = direction.normalized * velocidade;
+			direction = direction.normalized * speed;
 			rb.velocity = (Vector2)direction;
 	}
 
