@@ -13,6 +13,7 @@ abstract public class PersonagemBase : MonoBehaviour {
 	private float imunityCounter;
 
 	void Start() {
+		Debug.Log("Iniciou");
 		imunityCounter = 0;
 	}
 
@@ -27,6 +28,7 @@ abstract public class PersonagemBase : MonoBehaviour {
 
 	public virtual void TakeDamage(int damage){
 		if (imunityCounter >= imunityCooldown) {
+			Debug.Log("Tomou dano");
 			this.health -= damage;
 			imunityCounter = 0;
 		}
