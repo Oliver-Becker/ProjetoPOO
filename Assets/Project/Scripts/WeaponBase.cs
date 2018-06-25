@@ -4,17 +4,8 @@ using UnityEngine;
 
 public class WeaponBase : MonoBehaviour {
 
-	protected int damage;
-
-	// Use this for initialization
-	void Start () {
-//		Attack (gameObject);
-	}
-	
-	// Update is called once per frame
-	void Update () {
-//		Attack (gameObject);
-	}
+	[SerializeField] protected int damage;
+	protected int ammunition;
 
 	public virtual void Attack(PersonagemBase defender) {
 		defender.TakeDamage (this.damage);
