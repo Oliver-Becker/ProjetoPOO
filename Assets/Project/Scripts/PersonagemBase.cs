@@ -20,7 +20,6 @@ abstract public class PersonagemBase : MonoBehaviour {
 	}
 			
 	protected bool canMove;
-	protected bool canAttack;
 
 	public virtual void TakeDamage(int damage){
 		if (immunity.isReady) {
