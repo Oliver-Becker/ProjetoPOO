@@ -5,17 +5,22 @@ using UnityEngine;
 public class InimigoMeele : InimigoBase {
 	// Use this for initialization
 	void Start () {
+		health = 15;
 		playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
 		rb = gameObject.GetComponent<Rigidbody2D>();
 		damage=3;
 	}	
 	// Update is called once per frame
 	void Update () {
-			Move();
+		Move();
 	}
 	public void OnCollisionStay2D(Collision2D collisionInfo){
 		if(collisionInfo.gameObject.tag == "Player") {
-			collisionInfo.gameObject.GetComponent<PlayerController>().TakeDamage(damage);
+			if(attack.isReady){
+				collisionInfo.gameObject.GetComponent<PlayerController>().TakeDamage(damage);
+				attack.StartCooldown (this);
+				
+			}
 		}
 	}
 }
