@@ -2,29 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-/*public class CoRotina : MonoBehaviour {
-	public static CoRotina instance;
-
-	void Start() {
-		CoRotina.instance = this;
-	}
-}
-*/
 public class Cooldown {
 
-	public float cooldown;
+	public float time;
 
 	public bool isReady {
 		get; private set;
 	}
 
 	public Cooldown() {
-		this.cooldown = 0;
+		this.time = 0;
 		this.isReady = true;
 	}
 
-	public Cooldown(float cooldown) {
-		this.cooldown = cooldown;
+	public Cooldown(float time) {
+		this.time = time;
 		this.isReady = true;
 	}
 
@@ -34,7 +26,7 @@ public class Cooldown {
 
 	private IEnumerator WaitCooldown() {
 		isReady = false;
-		yield return new WaitForSeconds (cooldown);
+		yield return new WaitForSeconds (time);
 		isReady = true;
 	}
 }

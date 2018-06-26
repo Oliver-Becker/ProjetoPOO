@@ -18,9 +18,8 @@ public class Projectile : WeaponBase {
 	}
 
 	void OnTriggerEnter2D(Collider2D collisionInfo) {
-		Debug.Log ("collider tag: " + collisionInfo.gameObject.tag +"target: " + target);
         if (collisionInfo.gameObject.tag == this.target){
-			collisionInfo.gameObject.GetComponent<PersonagemBase>().TakeDamage(this.damage);
+			collisionInfo.gameObject.GetComponent<BaseCharacter>().TakeDamage(this.damage);
 			Destroy(gameObject);
         }
     }

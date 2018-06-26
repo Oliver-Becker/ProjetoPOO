@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 50917517988671688}
   - component: {fileID: 58024853640389972}
   - component: {fileID: 95568192993153742}
-  - component: {fileID: 114661220376210014}
+  - component: {fileID: 114138086349242410}
   m_Layer: 0
   m_Name: RangedEnemy
   m_TagString: Enemy
@@ -97,7 +97,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114661220376210014
+--- !u!114 &114138086349242410
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -105,12 +105,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1991948212122940}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 810f2e1703eb3e248a92fb3c9838cfcc, type: 3}
+  m_Script: {fileID: 11500000, guid: 97f427a094506994db0221a0ac071822, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 25
+  health: 10
   speed: 0
-  damage: 5
+  damage: 4
   bullet: {fileID: 1959920953046444, guid: e10e700e374b7154ebd1f8caedc07c2a, type: 2}
 --- !u!212 &212559040092293630
 SpriteRenderer:

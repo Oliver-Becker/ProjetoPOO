@@ -11,13 +11,13 @@ public class WeaponBase : MonoBehaviour {
 		get { return attackCooldown; }
 		set { 
 			if (value < 0)
-				attack.cooldown = 0;
+				attack.time = 0;
 			else
-				attack.cooldown = value;
+				attack.time = value;
 		}
 	}
 
-	public virtual void Attack(PersonagemBase defender) {
+	public virtual void Attack(BaseCharacter defender) {
 		if (attack.isReady) {
 			defender.TakeDamage (this.damage);
 			attack.StartCooldown (this);

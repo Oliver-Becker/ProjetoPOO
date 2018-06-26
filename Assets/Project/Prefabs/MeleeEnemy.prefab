@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 50242961991769504}
   - component: {fileID: 61199081871083054}
   - component: {fileID: 95175004182419664}
-  - component: {fileID: 114254206989616384}
+  - component: {fileID: 114169918381623318}
   m_Layer: 0
   m_Name: MeleeEnemy
   m_TagString: Enemy
@@ -107,7 +107,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114254206989616384
+--- !u!114 &114169918381623318
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -115,12 +115,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1895896324019798}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df5c7dd52f052a04fab4af81bae3ef30, type: 3}
+  m_Script: {fileID: 11500000, guid: 7c062c1828ceb2f4f9e44ba87458f196, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 15
   speed: 3.5
-  damage: 3
+  damage: 6
 --- !u!212 &212880043349279838
 SpriteRenderer:
   m_ObjectHideFlags: 1

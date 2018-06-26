@@ -22,8 +22,8 @@ GameObject:
   - component: {fileID: 212481891822293284}
   - component: {fileID: 50040204385266170}
   - component: {fileID: 58550028225320478}
-  - component: {fileID: 114822371201194270}
   - component: {fileID: 95780529359727740}
+  - component: {fileID: 114822371201194270}
   m_Layer: 0
   m_Name: Suriken
   m_TagString: Untagged

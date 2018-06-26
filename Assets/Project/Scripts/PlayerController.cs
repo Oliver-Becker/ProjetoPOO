@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : PersonagemBase {
+public class PlayerController : BaseCharacter {
 
 	private Rigidbody2D rigid;
 

@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e29380f25ff390a4a93e26221387136b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 3
+  damage: 5
   ammunition: {fileID: 1611755054320506, guid: ff92a6d8c7622c8459d1e8f6ac0a2800, type: 2}
 --- !u!212 &212947933234073228
 SpriteRenderer:
