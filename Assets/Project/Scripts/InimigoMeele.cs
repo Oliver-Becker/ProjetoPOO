@@ -8,7 +8,7 @@ public class InimigoMeele : InimigoBase {
 		health = 15;
 		playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
 		rb = gameObject.GetComponent<Rigidbody2D>();
-		damage=3;
+		attackCooldown = 0.3f;
 	}	
 	// Update is called once per frame
 	void Update () {

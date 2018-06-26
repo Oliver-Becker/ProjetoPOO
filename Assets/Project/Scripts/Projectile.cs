@@ -3,29 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Projectile : WeaponBase {
-	protected string enemy;
+	protected string target;
 
-	protected int speed = 6;
+	protected float speed = 6;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-
-	public void Shoot(Vector3 player, string s, int damage){
+	public void Shoot(Vector3 targetPosition, string targetTag, int damage){
 		Rigidbody2D rb = gameObject.GetComponent<Rigidbody2D>();
 		Vector3 direction;
-		direction = player - transform.position;
+		direction = targetPosition - transform.position;
 		direction = direction.normalized * this.speed;
 		rb.velocity = (Vector2)direction;
-		this.enemy = s;
+		this.target = targetTag;
 		this.damage = damage;
 	}
 
-	void OnTriggerEnter2D(Collider2D collisionInfo){
-
-        //If the object we collided with was a Runner and not a Catcher.
-        if (collisionInfo.gameObject.tag == this.enemy){
+	void OnTriggerEnter2D(Collider2D collisionInfo) {
+		Debug.Log ("collider tag: " + collisionInfo.gameObject.tag +"target: " + target);
+        if (collisionInfo.gameObject.tag == this.target){
 			collisionInfo.gameObject.GetComponent<PersonagemBase>().TakeDamage(this.damage);
 			Destroy(gameObject);
         }

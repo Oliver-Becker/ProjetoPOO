@@ -113,24 +113,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &705826569 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1681995237880774, guid: 9208a39fdb17ac340bedc9cf4de4e623,
-    type: 2}
-  m_PrefabInternal: {fileID: 722338970}
---- !u!114 &705826575
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 705826569}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d2dd7c394068314eb6fbeb83e6e3005, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 0
---- !u!1001 &722338970
+--- !u!1001 &1213485379
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -167,11 +150,6 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4965354420253812, guid: 9208a39fdb17ac340bedc9cf4de4e623, type: 2}
       propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114547648405948254, guid: 9208a39fdb17ac340bedc9cf4de4e623,
-        type: 2}
-      propertyPath: immunityCooldown
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -296,6 +274,10 @@ Prefab:
     - target: {fileID: 4731506950743240, guid: f37e1dab331d48a45a07389379de2f4b, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1895896324019798, guid: f37e1dab331d48a45a07389379de2f4b, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f37e1dab331d48a45a07389379de2f4b, type: 2}

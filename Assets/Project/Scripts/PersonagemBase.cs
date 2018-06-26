@@ -5,7 +5,7 @@ using UnityEngine;
 abstract public class PersonagemBase : MonoBehaviour {
 	
 	[SerializeField] protected int health;
-	[SerializeField] protected int speed;
+	[SerializeField] protected float speed;
 
 	private Cooldown immunity = new Cooldown(1);
 
@@ -24,6 +24,8 @@ abstract public class PersonagemBase : MonoBehaviour {
 	public virtual void TakeDamage(int damage){
 		if (immunity.isReady) {
 			this.health -= damage;
+			if (this.health <= 0)
+				Destroy (gameObject);
 			immunity.StartCooldown (this);
 		}
 	}
