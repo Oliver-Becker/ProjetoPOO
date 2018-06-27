@@ -4,7 +4,7 @@ using UnityEngine;
 
 abstract public class BaseCharacter : MonoBehaviour {
 	
-	[SerializeField] protected int health;
+	[SerializeField] public int health;
 	[SerializeField] protected float speed;
 
 	private Cooldown immunity = new Cooldown(1);

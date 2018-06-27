@@ -7,6 +7,7 @@ public class Spawner : MonoBehaviour {
 	public int initialEnemies;
 	public float spawnColdown;
 	public GameObject[] enemies;
+	public ScriptUI UI;
 
 	private Cooldown cooldown;
 	private bool spawned = true;
@@ -24,7 +25,7 @@ public class Spawner : MonoBehaviour {
 				cooldown.StartCooldown (this);
 				spawned = false;
 			} else if (cooldown.isReady) {
-				wave++;
+				UI.AtualizaWave (++wave);
 				spawned = true;
 				SpawnEnemy (initialEnemies + (int)Mathf.Sqrt(wave));
 			}
